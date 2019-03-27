@@ -191,7 +191,8 @@ So now its time to create some test data
           url: 'https://z3ntestframework.zendesk.com'
           username: ''
           pasword: ''
-          env: 'Test'	
+          env: 'Test'
+	  auth: 'xxxxxxxxxxxx'
 	```
 !!! IMP note !!! 
         Please make sure that indentation is proper in yml file 
@@ -205,11 +206,12 @@ So now its time to create some test data
 	url = URI(domain_url + endpoint)
 	
 	```
-3. Add subdomain information in `config.yml`
+3. Add subdomain and authentication information in `config.yml`
 
 	``` 
 	account:
 	   url: 'https://z3ntestframework.zendesk.com'
+	   auth: 'value from postman script'
 	   
 	 ```
 4. Define API endpoint in `endpoints.rb`
@@ -254,6 +256,11 @@ So now its time to create some test data
 	def password
 	  yml = load_config
 	  yml['account']['password']
+	end
+	
+	def basic_auth
+	  yml = load_config
+	  yml['account']['auth']
 	end
 	```
 
@@ -324,7 +331,7 @@ So now its time to create some test data
 	  # configure an API client
 	  request = Net::HTTP::Post.new(URI(url))
 	  request["content-type"] = 'application/x-www-form-urlencoded'
-	  request["authorization"] = 'Basic bWNoYXVoYW4rd3d0QHplbmRlc2suY29tOk11Z2RoYSoxMjM='
+	  request["authorization"] = basic_auth
 	  request["Content-Type"] = "application/json"
 	  request
 	end
