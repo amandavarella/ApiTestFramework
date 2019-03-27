@@ -262,6 +262,8 @@ So now its time to create some test data
 
 	```
 	puts account_url
+	puts username
+	puts password
 	puts CREATE_USER
 
 	```
@@ -301,11 +303,11 @@ So now its time to create some test data
 	
 	 with
 
-	`configure_client`
+	`api_client = configure_client`
 
 2. Make changes in the as follows 
 
-	`response = http.request(request)`  ---- change to ----> `response = api_client.request(request)
+	`response = http.request(request)`  ---- change to ----> `response = api_client.request(request)`
 
 
 3. Run `refactor_test.rb`
