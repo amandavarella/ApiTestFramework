@@ -1,8 +1,12 @@
 # ApiTestFramework
 Documentation for API test framework workshop for women who test meetup
 
-Account subdomain for testing: https://z3ntestframework.zendesk.com/agent/admin/people
-API under test : /api/v2/users.json
+Account subdomain for testing: 
+
+`https://z3ntestframework.zendesk.com/agent/admin/people`
+
+API under test : `/api/v2/users.json`
+
 Request body : 
 
 	{
