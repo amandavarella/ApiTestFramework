@@ -74,6 +74,9 @@
 
 7. Change user name and email for now
 
+	` name: yourname_anynumber` example: `mugdhac577`
+	`email: yourname_anynumber@example.org` example: `mugdhac666@example.org`
+
 8. Run test from the project path
 
 	If using terminal to run test 
