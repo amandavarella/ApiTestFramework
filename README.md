@@ -265,7 +265,6 @@ So now its time to create some test data
 	puts username
 	puts password
 	puts CREATE_USER
-
 	```
 
 3. Run `refactor_test.rb`
@@ -296,7 +295,6 @@ So now its time to create some test data
 	Replace following code
 
 	```	
-	url = URI(domain_url + endpoint)
 	http = Net::HTTP.new(url.host, url.port)
 	http.use_ssl = true
 	```
@@ -305,15 +303,12 @@ So now its time to create some test data
 
 	`api_client = configure_client`
 
-2. Make changes in the as follows 
+3. Make changes in the as follows 
 
 	Replace `response = http.request(request)`  ---- with ----> `response = api_client.request(request)`
-	
-	Replace `request = Net::HTTP::Post.new(url)` ---- with ----> `request = Net::HTTP::Post.new(account_url)`
-	
+		
 
-
-3. Run `refactor_test.rb`
+4. Run `refactor_test.rb`
 
 	`!!! Test should be successful !!!`
 	
