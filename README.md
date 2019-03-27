@@ -3,13 +3,20 @@
 
 	`https://www.getpostman.com/downloads/`
 
-2. Account subdomain for testing: 
+2. Account information for testing: 
 
-	`https://z3ntestframework.zendesk.com`
+	subdomain: `https://z3ntestframework.zendesk.com`
+	
+	username: `workshopadmin@example.com`
+	
+	password: `admin`
 
 3. API under test : `/api/v2/users.json`
 
 4. Request body : 
+	
+	Please use different user name and email
+	
 	```
 	{
 	"user": 
