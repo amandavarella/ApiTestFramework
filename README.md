@@ -3,19 +3,38 @@ Documentation for API test framework workshop for women who test meetup
 
 # STEP 1
 
-- Create a new project in your IDE or use any online ruby compliler like Repl.
-- Create folders as follows
+1. Create a new project in your IDE or use any online ruby compliler like Repl.
+
+2. Create folders as follows
 	- config
 	- spec
 	   - features
 		 - fixtures
 		 - support	
- - Create new file
+3. Create new file
  	- Features -> original_test.rb
-- Copy code snippet from postman to original_test.rb
-- Following lines of code are required to run postman test in ruby	
+	
+4. Copy code snippet from postman to original_test.rb
+
+5. Following lines of code are required to run postman test in ruby. Please add them if its missing.
+
 	`require 'openssl'`
+	
 	`http.use_ssl = true`
-- To remove postman specific settings and tokens delete follwoing code from your test as they are NO longer required
+	
+6. To remove postman specific settings and tokens delete follwoing code from your test as they are NO longer required
+
 	`request["postman-token"] = token_vale`
-	`request["cache-control"] = 'no-cache'	
+	
+	`request["cache-control"] = 'no-cache'	`
+	
+7. Run test from terminal from the project path
+
+	```
+	cd spec/features
+	ruby original_test.rb
+	```
+	
+	` !!! Test Should pass !!! `
+	
+Note : if test fails with error `email is already being used by another user` please change user email address and rerun the test case	
