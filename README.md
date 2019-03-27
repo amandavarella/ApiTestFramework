@@ -72,8 +72,9 @@
 	
 	`request["cache-control"] = 'no-cache'	`
 
-	
-7. Run test from the project path
+7. Change user name and email for now
+
+8. Run test from the project path
 
 	If using terminal to run test 
 
