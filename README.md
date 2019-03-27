@@ -187,12 +187,14 @@ So now its time to create some test data
 1. To set up account configuration copy the following code into `config -> config.yml`
 
 	```
-	account:
-	 url: 'subdomain url'
-	 username: ''
-	 password: ''
-	 env: 'Test'	
+	 account:
+          url: 'https://z3ntestframework.zendesk.com'
+          username: ''
+          pasword: ''
+          env: 'Test'	
 	```
+!!! IMP note !!! 
+        Please make sure that indentation is proper in yml file 
 
 2. For simplicity define domain url and endpoints separately in `refactor_test.rb`
 	
@@ -224,6 +226,8 @@ So now its time to create some test data
 
 1. To load the account information add following methods to `support->loadConfig.rb`
 
+!!! Note: make sure that you give correct relative or absolute path for config.yml !!!
+
 	```
 	require 'yaml'
 	
@@ -237,11 +241,22 @@ So now its time to create some test data
 	 yml['account']['url']
 	end
 	
-	def envirionment
-	 yml = load_config
-	 yml['account']['env']
-	end 
+	def environment
+	  yml = load_config
+	  yml['account']['env']
+	end
+
+	def username
+	  yml = load_config
+	  yml['account']['username']
+	end
+
+	def password
+	  yml = load_config
+	  yml['account']['password']
+	end
 	```
+
 
 2. use above methods in `refactor_test.rb`to make sure correct values of subdomain and endpoints are loaded
 
