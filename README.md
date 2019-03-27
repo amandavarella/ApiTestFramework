@@ -46,7 +46,7 @@
 	
 # STEP 1 : Set up new project
 
-1. Create a new project in your IDE or use any online ruby compliler like Repl.
+1. Create a new project in your IDE or use any online ruby compliler like Repl (https://repl.it/languages/ruby)
 
 2. Create folders as follows
 	- config
