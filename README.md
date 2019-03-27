@@ -1,7 +1,7 @@
 # ApiTestFramework
 Documentation for API test framework workshop for women who test meetup
 
-# STEP 1
+# STEP 1 : Set up new project
 
 1. Create a new project in your IDE or use any online ruby compliler like Repl.
 
@@ -42,7 +42,7 @@ Documentation for API test framework workshop for women who test meetup
 Note : if test fails with error `email is already being used by another user` please change user email address and rerun the test case	
 
 
-# STEP 2
+# STEP 2 : Add description and import files
 
 1. Create a duplicate copy of  `original_test.rb` and name it as `refactor_test.rb`
 	
@@ -91,7 +91,7 @@ Note : if test fails with error `email is already being used by another user` pl
 So now its time to create some test data
 
 
-# STEP 3
+# STEP 3 : Create Test data
 
 1. To create test data copy following methods in `support->helper.rb`
 
@@ -125,7 +125,7 @@ So now its time to create some test data
 
 	` !!! Test Should be successful !!!`
 	
-# STEP 4
+# STEP 4 : Define endpoints
 
 1. To set up account configuration copy the following code into `config -> config.yml`
 
@@ -161,7 +161,7 @@ So now its time to create some test data
 	` !!! Test Should be successful !!!`	
 	
 	
-# STEP 5
+# STEP 5 : Load account information
 
 1. To load the account information add following methods to `support->loadConfig.rb`
 
@@ -198,7 +198,7 @@ So now its time to create some test data
 	
 	
 	
-# STEP 6 
+# STEP 6 : API Client configuration
 
 1. For client configuration copy following code into `configClient.rb`
 
@@ -217,14 +217,15 @@ So now its time to create some test data
 	```
 2. modify `refactor_test.rb` to use  `configure_client `
 
-Remove follwoing code
+	Replace following code
 
-	```
+	```	
 	url = URI(domain_url + endpoint)
 	http = Net::HTTP.new(url.host, url.port)
 	http.use_ssl = true
 	```
-and replace it with
+	
+	 with
 
 	`configure_client`
 
@@ -236,4 +237,45 @@ and replace it with
 3. Run `refactor_test.rb`
 
 	`!!! Test should be successful !!!`
+	
+	
+# STEP 7 : Build Post request 
 
+1. Add following method to `configClient.rb` 
+
+	```
+	def build_post_request(endpoint)
+	  url = account_url + endpoint
+
+	  # configure an API client
+	  request = Net::HTTP::Post.new(URI(url))
+	  request["content-type"] = 'application/x-www-form-urlencoded'
+	  request["authorization"] = 'Basic bWNoYXVoYW4rd3d0QHplbmRlc2suY29tOk11Z2RoYSoxMjM='
+	  request["Content-Type"] = "application/json"
+	  request
+	end
+	```
+
+
+2. In `refactor_test.rb` 
+
+1. Replace following code
+
+	```
+	request = Net::HTTP::Post.new(url)
+	request["content-type"] = 'application/x-www-form-urlencoded'
+	request["content-type"] = 'application/json'
+	request["authorization"] = 'Basic bWNoYXVoYW4rd3d0QHplbmRlc2suY29tOk11Z2RoYSoxMjM='
+	```
+	
+	With
+
+	`request = build_post_request(CREATE_USER)`
+	
+	
+	
+2. Run `refactor_test.rb`
+
+	`!!! Test should be successful !!!`	
+	
+	
