@@ -159,3 +159,45 @@ So now its time to create some test data
 5. Run `refactor_test.rb`
 
 	` !!! Test Should be successful !!!`	
+	
+	
+# STEP 5
+
+1. To load the account information add following methods to `support->loadConfig.rb`
+
+```
+	require 'yaml'
+	
+	def load_config
+	 path = '../../config/config.yml'
+	 YAML::load(File.open(path))
+	end
+
+	def account_url
+	 yml = load_config
+	 yml['account']['url']
+	end
+	
+	def envirionment
+	 yml = load_config
+	 yml['account']['env']
+	end 
+```
+
+2. use above methods in `refactor_test.rb`to make sure correct values of subdomain and endpoints are loaded
+
+Mofidy `refactor_test.rb` 
+
+```
+puts account_url
+puts CREATE_USER
+
+```
+
+3. Run `refactor_test.rb`
+
+	`!!! test should print values present in config.yml !!!`
+	
+	
+	
+	
