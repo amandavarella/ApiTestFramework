@@ -207,7 +207,7 @@ So now its time to create some test data
 
 	``` 
 	account:
-	   url: 'https://z3n-wwt.zendesk.com'
+	   url: 'https://z3ntestframework.zendesk.com'
 	   
 	 ```
 4. Define API endpoint in `endpoints.rb`
