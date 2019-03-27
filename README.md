@@ -165,7 +165,7 @@ So now its time to create some test data
 
 1. To load the account information add following methods to `support->loadConfig.rb`
 
-```
+	```
 	require 'yaml'
 	
 	def load_config
@@ -182,17 +182,17 @@ So now its time to create some test data
 	 yml = load_config
 	 yml['account']['env']
 	end 
-```
+	```
 
 2. use above methods in `refactor_test.rb`to make sure correct values of subdomain and endpoints are loaded
 
 Mofidy `refactor_test.rb` 
 
-```
-puts account_url
-puts CREATE_USER
+	```
+	puts account_url
+	puts CREATE_USER
 
-```
+	```
 
 3. Run `refactor_test.rb`
 
@@ -200,4 +200,42 @@ puts CREATE_USER
 	
 	
 	
-	
+# STEP 6 
+
+1. For client configuration copy following code into `configClient.rb`
+
+	```
+	require 'net/http'
+
+	# This method configures and returns api client 
+	def configure_client
+	 url = URI(account_url)
+	 # api client
+	 api_client = Net::HTTP.new(url.host, url.port)
+	 api_client.use_ssl = true
+	 api_client
+	end
+
+	```
+2. modify `refactor_test.rb` to use  `configure_client `
+
+Remove follwoing code from `refactor_test.rb`
+
+	```
+	url = URI(domain_url + endpoint)
+	http = Net::HTTP.new(url.host, url.port)
+	http.use_ssl = true
+	```
+and replace it with
+
+	`configure_client`
+
+2. Make changes in the as follows 
+
+	`response = http.request(request)`  ---- change to ----> `response = api_client.request(request)
+
+
+3. Run `refactor_test.rb`
+
+	`!!! Test should be successful !!!`
+
