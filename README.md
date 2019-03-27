@@ -5,7 +5,7 @@
 
 2. Account subdomain for testing: 
 
-	`https://z3ntestframework.zendesk.com/agent/admin/people`
+	`https://z3ntestframework.zendesk.com`
 
 3. API under test : `/api/v2/users.json`
 
