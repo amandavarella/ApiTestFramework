@@ -75,6 +75,7 @@
 7. Change user name and email for now
 
 	` name: yourname_anynumber` example: `mugdhac577`
+	
 	`email: yourname_anynumber@example.org` example: `mugdhac666@example.org`
 
 8. Run test from the project path
@@ -138,6 +139,8 @@ Note : if test fails with error `email is already being used by another user` pl
 	
 	```
 5. Run `refactor_test.rb` 
+
+If using repl.it make sure to chnage file name in `main.rb`
 
 `!!! Test will fail with error : email is already being used by another user !!!`
 
