@@ -127,7 +127,7 @@ Note : if test fails with error `email is already being used by another user` pl
 	require '../../spec/support/configClient'
 	```
 	
-	Note : if require doesn’t work try require_relative
+	Note : if using repl.it try require_relative
 
 4. Modify `refactor_test.rb` to add assertions as follows
 
