@@ -125,3 +125,37 @@ So now its time to create some test data
 
 	` !!! Test Should be successful !!!`
 	
+# STEP 4
+
+1. To set up account configuration copy the following code into `config -> config.yml`
+
+	```
+	account:
+	 url: 'subdomain url'
+	 env: 'Test'	
+	```
+
+2. For simplicity define domain url and endpoints separately in `refactor_test.rb`
+	
+	```
+	domain_url = "https://z3n-wwt.zendesk.com"
+	endpoint = "/api/v2/users.json"
+	
+	url = URI(domain_url + endpoint)
+	
+	```
+3. Add subdomain information in `config.yml`
+
+	``` 
+	account:
+	   url: 'https://z3n-wwt.zendesk.com'
+	   
+	 ```
+4. Define API endpoint in `endpoints.rb`
+
+	` CREATE_USER = "/api/v2/users.json" `
+	
+	
+5. Run `refactor_test.rb`
+
+	` !!! Test Should be successful !!!`	
