@@ -34,7 +34,7 @@
 
 	request = Net::HTTP::Post.new(url)
 	request["content-type"] = 'application/json'
-	request["authorization"] = 'Basic bWNoYXVoYW5AemVuZGVzay5jb206YWRtaW4='
+	request["authorization"] = 'xxxxxxxxxxxxxxxxxxx'
 	request["cache-control"] = 'no-cache'
 	request["postman-token"] = '5508c333-b1eb-db66-da5a-c1511044c28b'
 	request.body = "{\n\"user\": \n\t{\n\t\t\"name\": \"U1\", \n\t\t\"email\": \"U1@example.org\"\n\t}\n}\n"
@@ -182,20 +182,22 @@ So now its time to create some test data
 
 	` !!! Test Should be successful !!!`
 	
-# STEP 4 : Define endpoints
+# STEP 4 : Define endpoints and account configuration
 
 1. To set up account configuration copy the following code into `config -> config.yml`
 
 	```
 	account:
 	 url: 'subdomain url'
+	 username: ''
+	 password: ''
 	 env: 'Test'	
 	```
 
 2. For simplicity define domain url and endpoints separately in `refactor_test.rb`
 	
 	```
-	domain_url = "https://z3n-wwt.zendesk.com"
+	domain_url = "https://z3ntestframework.zendesk.com"
 	endpoint = "/api/v2/users.json"
 	
 	url = URI(domain_url + endpoint)
