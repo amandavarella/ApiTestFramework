@@ -279,3 +279,19 @@ So now its time to create some test data
 	`!!! Test should be successful !!!`	
 	
 	
+# STEP 8:
+
+1. Remove print statements
+
+
+# Final spec
+
+```
+
+code 
+
+
+```
+
+
+
