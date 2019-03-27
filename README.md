@@ -369,8 +369,14 @@ So now its time to create some test data
 	
 # STEP 8:
 
-1. Remove print statements
+1. Cleanup code 
 
+	- Deleting users
+	
+2. Cleanup spec 
+	
+	-  Remove all print statements
+	
 
 # Final spec
 
