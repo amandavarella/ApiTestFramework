@@ -307,7 +307,10 @@ So now its time to create some test data
 
 2. Make changes in the as follows 
 
-	`response = http.request(request)`  ---- change to ----> `response = api_client.request(request)`
+	Replace `response = http.request(request)`  ---- with ----> `response = api_client.request(request)`
+	
+	Replace `request = Net::HTTP::Post.new(url)` ---- with ----> `request = Net::HTTP::Post.new(account_url)`
+	
 
 
 3. Run `refactor_test.rb`
