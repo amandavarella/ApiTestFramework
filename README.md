@@ -186,8 +186,6 @@ So now its time to create some test data
 
 2. use above methods in `refactor_test.rb`to make sure correct values of subdomain and endpoints are loaded
 
-Mofidy `refactor_test.rb` 
-
 	```
 	puts account_url
 	puts CREATE_USER
@@ -219,7 +217,7 @@ Mofidy `refactor_test.rb`
 	```
 2. modify `refactor_test.rb` to use  `configure_client `
 
-Remove follwoing code from `refactor_test.rb`
+Remove follwoing code
 
 	```
 	url = URI(domain_url + endpoint)
