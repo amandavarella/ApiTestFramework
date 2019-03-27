@@ -68,9 +68,10 @@
 	
 6. To remove postman specific settings and tokens delete follwoing code from your test as they are NO longer required
 
-	`request["postman-token"] = token_vale`
+	`request["postman-token"] = xxxxxxxxxxx`
 	
 	`request["cache-control"] = 'no-cache'	`
+
 	
 7. Run test from the project path
 
@@ -80,6 +81,10 @@
 	cd spec/features
 	ruby original_test.rb
 	```
+	
+	If using Repl.it online compiler
+	` require_relative 'spec/features/original_test.rb`
+	
 	
 	` !!! Test Should pass !!! `
 	
