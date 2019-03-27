@@ -175,9 +175,9 @@ So now its time to create some test data
 
 	```
 	# set the request body
-	request.body = "{\t\n\"user\": \n\t{\n\t\t\"name\": \"#{create_user_name}\", \n\t\t\"email\": \"#
-	{create_user_email}\"\n\t}\n}"
-	
+	request.body = "{\n\"user\": \n\t{\n\t\t\"name\": \"#{create_user_name}\", \n\t\t\"email\": \"#	
+	{create_user_email}\"\n\t}\n}\n"
+
 	```
 3. Run `refactor_test.rb`
 
