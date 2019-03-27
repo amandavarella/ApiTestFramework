@@ -62,9 +62,9 @@
 
 5. Following lines of code are required to run postman test in ruby. Please add them if its missing.
 
-	`require 'openssl'`
+	copy `require 'openssl'` at the top of the file
 	
-	`http.use_ssl = true`
+	copy `http.use_ssl = true` after `Net::HTTP.new`
 	
 6. To remove postman specific settings and tokens delete follwoing code from your test as they are NO longer required
 
