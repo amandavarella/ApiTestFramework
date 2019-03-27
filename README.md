@@ -93,6 +93,35 @@ So now its time to create some test data
 
 # STEP 3
 
+1. To create test data copy following methods in `support->helper.rb`
 
+	```
+	require 'securerandom'
+	require 'time'
 
+	def current_time
+	 Time.now.to_i
+	end
 
+	def create_user_name
+	 "user#{current_time}#{rand(100)}"
+	end
+
+	def create_user_email
+	 "user#{current_time}#{rand(100)}@example.com"
+	end
+
+	```
+
+2. Modify `refactor_test.rb` to use the test data by modifying the request body as follows
+
+	```
+	# set the request body
+	request.body = "{\t\n\"user\": \n\t{\n\t\t\"name\": \"#{create_user_name}\", \n\t\t\"email\": \"#
+	{create_user_email}\"\n\t}\n}"
+	
+	```
+3. Run `refactor_test.rb`
+
+	` !!! Test Should be successful !!!`
+	
