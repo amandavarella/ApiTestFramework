@@ -1,0 +1,6 @@
+account:
+  url: 'xxxxxxxxx'
+  username: 'xxxxxxxxx'
+  pasword: 'xxxxxxxx'
+  env: 'Test'
+  auth: 'xxxxxxxxxxxxx'
