@@ -1,6 +1,19 @@
 # ApiTestFramework
 Documentation for API test framework workshop for women who test meetup
 
+Account subdomain for testing: https://z3ntestframework.zendesk.com/agent/admin/people
+API under test : /api/v2/users.json
+Request body : 
+
+	{
+	"user": 
+		{
+			"name": "U4", 
+			"email": "U4@example.org"
+		}
+	}
+	
+
 # STEP 1 : Set up new project
 
 1. Create a new project in your IDE or use any online ruby compliler like Repl.
