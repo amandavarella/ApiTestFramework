@@ -52,8 +52,9 @@
 	- config
 	- spec
 	   - features
-		 - fixtures
-		 - support	
+	   - fixtures
+	   - support	
+	   
 3. Create new file
  	- Features -> original_test.rb
 	
