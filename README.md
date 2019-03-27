@@ -109,10 +109,10 @@ Note : if test fails with error `email is already being used by another user` pl
 	config -> 
 		config.rb
 	
-	Fixtures -> 
+	fixtures -> 
 		endpoints.rb
 	
-	Support ->
+	support ->
 		configClient.rb,	 
 		helper.rb, 	
 		loadConfig.rb
@@ -140,9 +140,11 @@ Note : if test fails with error `email is already being used by another user` pl
 	```
 5. Run `refactor_test.rb` 
 
-If using repl.it make sure to chnage file name in `main.rb`
+If using repl.it make sure to change file name in `main.rb`
 
-`!!! Test will fail with error : email is already being used by another user !!!`
+	`require_relative 'spec/features/original_test.rb`
+
+	`!!! Test will fail with error : email is already being used by another user !!!`
 
 So now its time to create some test data
 
