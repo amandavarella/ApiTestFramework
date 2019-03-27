@@ -28,7 +28,9 @@ Documentation for API test framework workshop for women who test meetup
 	
 	`request["cache-control"] = 'no-cache'	`
 	
-7. Run test from terminal from the project path
+7. Run test from the project path
+
+	If using terminal to run test 
 
 	```
 	cd spec/features
@@ -38,3 +40,59 @@ Documentation for API test framework workshop for women who test meetup
 	` !!! Test Should pass !!! `
 	
 Note : if test fails with error `email is already being used by another user` please change user email address and rerun the test case	
+
+
+# STEP 2
+
+1. Create a duplicate copy of  `original_test.rb` and name it as `refactor_test.rb`
+	
+	`refactor_test.rb` will be now used to refactor the test code and can be later compared with original_test.rb
+
+2. Follow presenter instructions to add explanation/documentation to your test 
+
+3. Create new files under follwing folders
+
+	config -> 
+		config.rb
+	
+	Fixtures -> 
+		endpoints.rb
+	
+	Support ->
+		configClient.rb,	 
+		helper.rb, 	
+		loadConfig.rb
+		
+4. Modify `refactor_test.rb` to import all required files
+
+	```
+	require 'json'
+	require '../../spec/support/loadConfig'
+	require '../../spec/fixtures/endpoints'
+	require '../../spec/support/helper'
+	require '../../spec/support/configClient'
+	```
+	
+	Note : if require doesn’t work try require_relative
+
+4. Modify `refactor_test.rb` to add assertions as follows
+
+	```
+	# assert if response code is not 201
+	if response.code != '201'
+	  raise "Invalid response code"
+	end
+	
+	```
+5. Run `refactor_test.rb` 
+
+`!!! Test will fail with error : email is already being used by another user !!!`
+
+So now its time to create some test data
+
+
+# STEP 3
+
+
+
+
