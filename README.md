@@ -107,7 +107,7 @@ Note : if test fails with error `email is already being used by another user` pl
 3. Create new files under follwing folders
 
 	config -> 
-		config.rb
+		config.yml
 	
 	fixtures -> 
 		endpoints.rb
