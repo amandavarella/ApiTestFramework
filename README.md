@@ -36,7 +36,7 @@
 	request["content-type"] = 'application/json'
 	request["authorization"] = 'xxxxxxxxxxxxxxxxxxx'
 	request["cache-control"] = 'no-cache'
-	request["postman-token"] = '5508c333-b1eb-db66-da5a-c1511044c28b'
+	request["postman-token"] = 'xxxxxxxxxxxx'
 	request.body = "{\n\"user\": \n\t{\n\t\t\"name\": \"U1\", \n\t\t\"email\": \"U1@example.org\"\n\t}\n}\n"
 
 	response = http.request(request)
