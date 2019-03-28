@@ -329,7 +329,7 @@ So now its time to create some test data
 	`!!! Test should be successful !!!`
 	
 	
-# STEP 7 : Build Post request 
+# Step 7 : Build Post request 
 
 1. Add following method to `configClient.rb` 
 
