@@ -51,7 +51,9 @@
 	
 	```
 	
-# STEP 1 : Set up new project
+# API TEST FRAMEWORK
+
+# Step 1 : Set up new project
 
 1. Create a new project in your IDE or use any online ruby compliler like Repl (https://repl.it/languages/ruby)
 
@@ -103,7 +105,7 @@
 Note : if test fails with error `email is already being used by another user` please change user email address and rerun the test case	
 
 
-# STEP 2 : Add description and import files
+# Step 2 : Add description and import files
 
 1. Create a duplicate copy of  `original_test.rb` and name it as `refactor_test.rb`
 	
@@ -156,7 +158,7 @@ If using repl.it make sure to change file name in `main.rb`
 So now its time to create some test data
 
 
-# STEP 3 : Create Test data
+# Step 3 : Create Test data
 
 1. To create test data copy following methods in `support->helper.rb`
 
@@ -189,7 +191,7 @@ So now its time to create some test data
 
 	` !!! Test Should be successful !!!`
 	
-# STEP 4 : Define endpoints and account configuration
+# Step 4 : Define endpoints and account configuration
 
 1. To set up account configuration copy the following code into `config -> config.yml`
 
@@ -231,7 +233,7 @@ So now its time to create some test data
 	` !!! Test Should be successful !!!`	
 	
 	
-# STEP 5 : Load account information
+# Step 5 : Load account information
 
 1. To load the account information add following methods to `support->loadConfig.rb`
 
@@ -287,7 +289,7 @@ So now its time to create some test data
 	
 	
 	
-# STEP 6 : API Client configuration
+# Step 6 : API Client configuration
 
 1. For client configuration copy following code into `configClient.rb`
 
@@ -367,7 +369,7 @@ So now its time to create some test data
 	`!!! Test should be successful !!!`	
 	
 	
-# STEP 8:
+# Step 8:
 
 1. Cleanup code 
 
@@ -378,14 +380,6 @@ So now its time to create some test data
 	-  Remove all print statements
 	
 
-# Final spec
-
-```
-
-code 
-
-
-```
 
 
 
